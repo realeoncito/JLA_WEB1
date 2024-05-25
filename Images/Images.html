@@ -23,3 +23,88 @@
             inkscape
             corel draw
 -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imagenes en HTML</title>
+    </head>
+
+    <body>
+        <h1>Imagenes en HTML</h1>
+        <!--Dos atributos para definir las imagenes.
+        Alt= texto alterno para la imagen.-->
+        <img src="https://placehold.co/1024x640" alt="Logo de perfil"/>
+        <picture>
+            <source srcset="https://placehold.co/380x380" 
+                media="(max-width:719px)">
+            <source srcset="https://placehold.co/780x480" 
+                media="(max-width:1023px)">
+            <img src="https://placehold.co/1024x720" 
+                alt="Responsive Image">
+        </picture>
+
+        <picture>
+            <source srcset="https://placehold.co/1024x720/orange/000" 
+                media="(min-width:1024px)">
+            <source srcset="https://placehold.co/780x480/orange/000" 
+                media="(min-width:720px)">
+            <img src="https://placehold.co/380x380/orange/000" 
+                alt="Responsive Image">
+        </picture>
+
+
+        <figure>
+            <picture>
+                <source srcset="https://placehold.co/1024x720/green/000" 
+                    media="(min-width:1024px)">
+                <source srcset="https://placehold.co/780x480/green/000" 
+                    media="(min-width:720px)">
+                <img src="https://placehold.co/380x380/green/000" 
+                    alt="Responsive Image">
+            </picture>
+            <figcaption>
+                Acuario de Tela: un lugar para disfrutar en familia las bellezas
+                de la fauna maritima de las costas hondureñas. 
+            </figcaption>
+        </figure>
+
+        <img src="resources/drawing.svg" alt="Imagen vectorial">
+
+        <br/>
+
+        <!--Hacerlo si es dinamico, si es estatico con ruta-->
+        <svg
+        width="210mm"
+        height="297mm"
+        viewBox="0 0 210 297"
+        version="1.1"
+        id="svg1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg">
+        <defs
+        id="defs1" />
+        <g
+        id="layer1">
+        <ellipse
+            style="fill:#d1000a;stroke-width:0.264583;fill-opacity:1"
+            id="path1"
+            cx="67.328384"
+            cy="83.059319"
+            rx="42.158897"
+            ry="39.012711" />
+        <ellipse
+            style="fill:#dad479;stroke-width:0.264583;fill-opacity:1"
+            id="path2"
+            cx="100.67796"
+            cy="190.65891"
+            rx="41.529659"
+            ry="45.934319" />
+        </g>
+        </svg>
+
+    </body>
+
+</html>
