@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media, Formulario y HTML Semántico</title>
+</head>
+
+<body>
+    <h1>Media</h1>
+    <!--Controls permite que se haga display de los controles para darle play y obtener audio.-->
+    <video controls>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+    </video>
+
+    <h2>Audio</h2>
+    <!--Se ejecute automaticamente y que inicie nuevamente.-->
+    <audio controls loop>
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+    </audio>
+
+
+    <!--Semantico y facil de entender-->
+    <h2>Formularios</h2>
+    <!--
+            ACTION: A donde va a enviar la peticion capturada por el formulario
+            METHOD: Como se va a serializar la informacion
+        -->
+    <form action="media.html" method="GET">
+        <label for="txtNombre">Nombre:</label>
+        <!--Att name define el nombre de la variable.
+                name por defecto se deja text
+                id= campo por el que se hace referencia en el lable att for. 
+            -->
+        <input required id="txtNombre" name="nombre" type="text" placeholder="Nombre Completo" />
+        <br />
+        <label for="txtEmail">Correo</label>
+        <input required id="txtEmail" name="email" type="email" placeholder="tucorreo@dominio.com">
+        <br />
+        <label for="txtPassword">Contraseña</label>
+        <input id="txtPassword" name="password" type="password"
+            title="8 letra, 1 mayúscula, 1 Número y un Caracter Especial" 
+            pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,12}$"/>
+        <br />
+
+        <label>Tema</label>
+        <div>
+            <input name="opcTema" value="Dark" id="opcDark" type="radio" />
+            <label for="opcDark">Dark</label>
+            <input name="opcTema" value="Light" id="opcLight" type="radio" />
+            <label for="opcLight">Light</label>
+            <input checked name="opcTema" value="Defined by OS" id="opcOS" type="radio" />
+            <label for="opcOS">Defined by OS</label>
+        </div>
+
+        <!--Crear secciones.-->
+        <fieldset>
+            <!--Titulo de la seccion. -->
+            <legend>Opciones</legend>
+            <label for="chkShareToFriends">Compartir con Amigos</label>
+            <input type="checkbox" value="1" name="shareWithFriends" id="chkShareToFriends" />
+            <br />
+            <label for="chkShareToStrangers">Compartir con Todos</label>
+            <input type="checkbox" value="1" name="shareWithStrangers" id="chkShareToStrangers" />
+            <br />
+            <label for="chkShareToACL">Compartir con Lista de Acceso</label>
+            <input type="checkbox" value="1" name="shareWithACL" id="shareWithACL" />
+            <br />
+        </fieldset>
+
+        <label for="cmbCiudad">Ciudad</label>
+        <select id="cmbCiudad" name="Ciudad">
+            <option value="1">Tegucigalpa</option>
+            <option value="3">Danli</option>
+            <option value="4">San Pedro Sula</option>
+            <option value="5">Choluteca</option>
+            <option value="6">Juticalpa</option>
+            <option value="7" selected>Santa Rosa de Copán</option>
+            <option value="8">Siguatepeque</option>
+            <option value="9">La Ceiba</option>
+            <option value="15">Olanchito</option>
+            <option value="17">Trujillo</option>
+        </select>
+        <br />
+        <label for="txtBlog">Entrada de Blog</label><br/>
+        <textarea id="txtBlog" name="Blog" placeholder="Escribir un blog" cols="80" rows="10"
+        ></textarea>
+        <br />
+
+        <button name="btnEnviar" type="submit">Enviar</button>
+        <button name="btnEnviar" type="reset">Limpiar</button>
+        <button name="btnEnviar" type="button">un Boton</button>
+    </form>
+
+</body>
+
+</html>
